@@ -16,4 +16,11 @@ jobs:
         run: |
           echo "Running tests..."
           npm test
-  
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: deploy
+        run: |
+          echo "Deploying the application..."
+          npm run deploy
