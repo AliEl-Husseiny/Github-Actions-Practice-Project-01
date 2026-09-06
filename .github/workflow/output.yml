@@ -1,0 +1,9 @@
+name: Output Details on issues
+on: issues
+jobs:
+  output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output issue Details
+        run: |
+          echo "Issue details ${{ github.event.issue.title }} - ${{ github.event.issue.body }}"
