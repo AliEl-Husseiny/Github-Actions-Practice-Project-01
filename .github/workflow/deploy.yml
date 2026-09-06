@@ -8,4 +8,12 @@ jobs:
         run: |
           echo "Linting the code..."
           npm linit
+  test:
+    runs-on: ubuntu-latest
+    needs: linit
+    steps:
+      - name: test
+        run: |
+          echo "Running tests..."
+          npm test
   
