@@ -1,0 +1,11 @@
+name: Test and Deploy workflow
+on: push
+jobs:
+  linit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: linit
+        run: |
+          echo "Linting the code..."
+          npm linit
+  
